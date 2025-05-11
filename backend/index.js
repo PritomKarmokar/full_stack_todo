@@ -1,10 +1,12 @@
 const express = require('express')
+const cors = require('cors')
 const { createTodo } = require('./types')
 const { todo } = require('./db')
 const app = express()
 const port = 3000
 
 app.use(express.json())
+app.use(cors())
 
 // body{
 // title: string
@@ -37,7 +39,7 @@ app.get("/todos", async (req, res) => {
         const todos = await todo.find()
         console.log(todos)
         res.json({
-            msg: todos
+            todos: todos
         })
     } catch (error) {
         console.error(error)

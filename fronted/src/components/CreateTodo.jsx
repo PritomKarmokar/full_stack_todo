@@ -1,12 +1,19 @@
-function CreateTodo() {
+export function CreateTodo() {
     return <div>
-        <input type="text" placeholder="title"></input><br></br>
-        <input type="text" placeholder="description"></input> <br></br>
+        <input
+            style={{
+                padding: 5,
+                margin: 5
+            }}
+            type="text" placeholder="title"></input><br></br>
+        <input style={{
+            padding: 5,
+            margin: 5
+        }} type="text" placeholder="description"></input> <br></br>
 
-        <button>Add a todo</button>
+        <button style={{
+            padding: 5,
+            margin: 5
+        }}>Add a todo</button>
     </div>
-}
-
-module.exports = {
-    CreateTodo
 }
